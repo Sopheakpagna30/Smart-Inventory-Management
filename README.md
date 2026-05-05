@@ -1,0 +1,171 @@
+# Gocart. 
+
+## Dependencies
+- "react-router-dom" 
+
+## How to run the project
+clone the project
+```
+git clone -b Customer https://github.com/MaoMonioudom/GoCart
+```
+go into project 
+```
+cd gocart
+```
+TO RUN THE SERVER
+```
+cd backend
+```
+create virtual environment
+```
+python -m venv venv
+```
+activate venv for bash
+```
+source venv/scripts/activate
+```
+install dependency
+```
+pip install -r requirements.txt
+```
+run server
+```
+python app.py
+```
+TO RUN WEB INTERFACE
+in new terminal
+```
+cd gocart/frontend && npm i && npm run dev
+```
+
+
+
+## Project Folder Structure
+```
+gocart/
+├── index.html
+├── package.json
+├── vite.config.js
+└── src/
+    ├── assets/
+    │   ├── images/
+    │   │   ├── banana.png
+    │   │   ├── book.jpg
+    │   │   ├── HomeCustomerBanner.png
+    │   │   └── logo.png
+    │   │
+    │   ├── categories/
+    │   │   ├── CategoryOne/
+    │   │   │   ├── index.js
+    │   │   │   └── Pic1.png … Pic12.png
+    │   │   ├── CategoryTwo/
+    │   │   ├── CategoryThree/
+    │   │   ├── CategoryFour/
+    │   │   ├── CategoryFive/
+    │   │   ├── CategorySix/
+    │   │   └── CategorySeven/
+    │   │
+    │   └── icons/
+    │       └── google-icon.png
+    │
+    ├── pages/                    # PUBLIC (NO AUTH)
+    │   ├── Landing/
+    │   │   └── Landing.jsx
+    │   │
+    │   ├── Home/
+    │   │   └── Home.jsx          # auth redirect
+    │   │
+    │   ├── Login/
+    │   │   └── Login.jsx
+    │   │
+    │   └── Register/
+    │       └── Register.jsx
+    │
+    ├── dashboards/               # AUTH REQUIRED
+    │   ├── customer/
+    │   │   ├── pages/
+    │   │   │   ├── CustomerHome.jsx
+    │   │   │   ├── CustomerProduct.jsx
+    │   │   │   ├── CustomerPromotion.jsx
+    │   │   │   ├── CustomerCart.jsx
+    │   │   │   └── CustomerProfile.jsx
+    │   │   │
+    │   │   └── components/
+    │   │       ├── Navbar.jsx
+    │   │       └── ProductCard.jsx
+    │   │
+    │   ├── seller/
+    │   │   ├── pages/
+    │   │   │   ├── SellerHome.jsx
+    │   │   │   ├── Product.jsx
+    │   │   │   ├── Inbox.jsx
+    │   │   │   ├── MLPrediction.jsx
+    │   │   │   └── SellerProfile.jsx
+    │   │   │
+    │   │   ├── components/
+    │   │   │   └── Navbar.jsx
+    │   │   │
+    │   │   └── data/
+    │   │       ├── comparisonData.js
+    │   │       ├── kpis.js
+    │   │       ├── products.js
+    │   │       ├── quantityData.js
+    │   │       ├── restockAlerts.js
+    │   │       └── salesTrendData.js
+    │   │
+    │   └── admin/
+    │       ├── pages/
+    │       │   ├── AdminHome.jsx
+    │       │   ├── CustomerManagement.jsx
+    │       │   ├── SellerManagement.jsx
+    │       │   ├── MLInsights.jsx
+    │       │   └── ProfilePage.jsx
+    │       │
+    │       ├── components/
+    │       │   ├── cards/
+    │       │   │   └── StatCard.jsx
+    │       │   │
+    │       │   ├── charts/
+    │       │   │   ├── BarChartBox.jsx
+    │       │   │   ├── CustomerAreaChart.jsx
+    │       │   │   ├── LineChartBox.jsx
+    │       │   │   └── PieChartBox.jsx
+    │       │   │
+    │       │   ├── table/
+    │       │   │   └── DataTable.jsx
+    │       │   │
+    │       │   ├── Logo.jsx
+    │       │   └── NavBar.jsx
+    │       │
+    │       └── data/
+    │           ├── customer.js
+    │           ├── seller.js
+    │           └── ml.js
+    │
+    ├── routes/
+    │   ├── AppRoutes.jsx
+    │   ├── ProtectedRoute.jsx
+    │   ├── Logo.jsx
+    │   ├── ProtectedRoute.jsx
+    │   └── RoleRoute.jsx
+    │
+    ├── services/
+    │   ├── api.js
+    │   ├── authService.js
+    │   ├── productService.js
+    │   └── userService.js
+    │
+    ├── context/
+    │   └── AuthContext.jsx
+    │
+    ├── hooks/
+    │   └── useAuth.js
+    │
+    ├── styles/
+    │   └── global.css
+    │
+    ├── App.jsx
+    └── main.jsx
+
+
+```
